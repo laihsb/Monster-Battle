@@ -2,8 +2,8 @@
 class Move {
   conctructor(name, power, accuracy) {
     this.name = name;
-    this.power = power;
-    this.accuracy = accuracy;
+    // this.power = power;
+    // this.accuracy = accuracy;
   }
 
   didHit() {
@@ -14,6 +14,26 @@ class Move {
   }
 }
 ///////////////////////////////////////
-// let move1 = new Move("dragon", 45, 2);
+console.log(this.name);
 /* Write your Move subclasses here! */
-// move1.didHit();
+
+class Fireball extends Move {
+  constructor() {
+    super("fireBall", 120, 0.75);
+  }
+}
+class Confusion extends Move {
+  constructor() {
+    super("Confusion", 80, 1);
+  }
+}
+class Freez extends Move {
+  constructor() {
+    super("Freez", 100, 0.65);
+  }
+}
+class Earthquake extends Move {
+  constructor() {
+    super("Earthquake", 60, 0.01);
+  }
+}
