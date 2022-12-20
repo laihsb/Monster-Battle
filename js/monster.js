@@ -22,3 +22,26 @@ class Monster {
 ///////////////////////////////////////
 
 /* Write your Monster subclasses here! */
+class Dragon extends Monster{
+    constructor(){
+        super("Dragon", 200, 50, 20, Fireball)
+    }
+}
+
+class Moth extends Monster{
+    constructor(){
+        super("Moth", 300, 15, 60, Confusion)
+    }
+}
+
+class Squirtle extends Monster{
+    constructor(){
+        super("Squirtle", 240, 65, 25, Freez)
+    }
+}
+
+class Geoduck extends Monster{
+    constructor(){
+        super("Geoduck", 150, 30, 65, Earthquake)
+    }
+}
