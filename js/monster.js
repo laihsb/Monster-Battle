@@ -7,16 +7,24 @@ class Monster {
     this.hp = hp;
     this.def = def;
     this.move = move;
+    this.maxHp = hp;
   }
-  attack(ele) {
-    if (ele) {
-      let damage = this.move.power * (this.atk / this.def);
-      ele.hp -= damage;
-      return `${this.name} used Fireball to deal ${ele.hp} damage to Moth!`;
-    } else {
-      return "Dragon missed";
+//   attack(ele) {
+//     if (ele) {
+//       let damage = this.move.power * (this.atk / this.def);
+//       ele.hp -= damage;
+//       return `${this.name} used Fireball to deal ${ele.hp} damage to Moth!`;
+//     } else {
+//       return "Dragon missed";
+//     }
+//   }
+attack(otherMonster){
+    if (!this.move.didHit()) {
+        return `${this.name} missed!`;
     }
-  }
+    const damage = this.move.power * (this.atk / otherMonster.def); otherMonster.hp -= damage;
+    return `${this.name} used ${this.move.name} to deal ${damage} damage to ${otherMonster.name}!`; 
+}
   //let img= "https://thumbs.dreamstime.com/b/smoke-monster-3086241.jpg";
 
   render(imgSrc) {
@@ -79,7 +87,6 @@ class Demon extends Monster {
   render() {
     return super.render(
       "https://thumbs.dreamstime.com/b/smoke-monster-3086241.jpg"
-      
     );
   }
 }

@@ -25,13 +25,13 @@ class Battle {
     const opponentAttackMessage = this.opponent.attack(this.player);
 
     let message = `${playerAttackMessage}\n${opponentAttackMessage}\n`;
-
+        
     const winner = this.checkWin();
 
     // Game is over
     if (winner) {
-      this.battleOver = true;
-      message += `The winner is ${winner}!`;
+    this.battleOver = true;
+    message += `The winner is ${winner}!`;
     }
 
     return message;
@@ -47,5 +47,5 @@ class Battle {
     this.renderMonster("player");
     this.renderMonster("opponent");
   }
-  
+
 }
