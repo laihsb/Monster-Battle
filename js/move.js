@@ -14,7 +14,7 @@ class Move {
   }
 }
 ///////////////////////////////////////
-console.log(this.name);
+//console.log(this.name);
 /* Write your Move subclasses here! */
 
 class Fireball extends Move {
