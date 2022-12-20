@@ -16,14 +16,12 @@ class Monster {
       return "Dragon missed";
     }
   }
-  
+  let img= "https://thumbs.dreamstime.com/b/smoke-monster-3086241.jpg";
   render(ele) {
     let img = document.createElement("img");
     img.src = "https://thumbs.dreamstime.com/b/smoke-monster-3086241.jpg";
-
     img.style.border = "10px solid orange";
     img.style.borderRadius = "10px";
-
     document.body.appendChild(img);
     return this.name + this.hp+img;
   }
@@ -64,3 +62,7 @@ class Geoduck extends Monster {
     super("Geoduck", 150, 30, 65, Earthquake);
   }
 }
+//create a conatiner variable=> container
+// inner conatiner => h3, h3 chikldren
+// conatiner.appendChild(child1);
+// conatiner.appendChild(child2);
