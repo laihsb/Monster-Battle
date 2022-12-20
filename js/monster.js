@@ -22,3 +22,8 @@ class Monster {
 ///////////////////////////////////////
 
 /* Write your Monster subclasses here! */
+class Dragon extends Monster {
+    constructor() {
+      super("Dragon", 100, 0.65);
+    }
+  }
