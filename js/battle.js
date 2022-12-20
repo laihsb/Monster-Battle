@@ -43,8 +43,9 @@ class Battle {
     const element = this[party].render();
     section.replaceChildren(element);
   }
-    render() {
-        this.renderMonster("player");
-        this.renderMonster("opponent");
-      }
+  render() {
+    this.renderMonster("player");
+    this.renderMonster("opponent");
+  }
+  
 }

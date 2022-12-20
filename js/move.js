@@ -7,7 +7,7 @@ class Move {
   }
 
   didHit() {
-    if (Math.random() > 0.6) {
+    if (Math.random() < this.accuracy) {
       return true;
     }
     return false;
