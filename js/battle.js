@@ -36,4 +36,15 @@ class Battle {
 
     return message;
   }
+  renderMonster(party) {
+    // NOTE: You don't need to fully understand the syntax of this method!
+    // You probably have something similar in your own code.
+    const section = document.querySelector(`section.${party}`);
+    const element = this[party].render();
+    section.replaceChildren(element);
+  }
+    render() {
+        this.renderMonster("player");
+        this.renderMonster("opponent");
+      }
 }
